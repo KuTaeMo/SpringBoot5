@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\dita_808\Desktop\ktm\reactor\.metadata\.plugins\org.eclipse.jdt.core
+187671370.index
+2085434707.index
+3858496902.index

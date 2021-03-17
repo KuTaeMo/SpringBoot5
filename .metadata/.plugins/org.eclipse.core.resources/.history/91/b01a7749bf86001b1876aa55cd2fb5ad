@@ -1,0 +1,17 @@
+package reactorex01;
+
+import org.reactivestreams.Subscription;
+
+// 구독 정보
+public class MySubscription implements Subscription{
+
+	public void request(long n) {
+		System.out.println("4. 구독자가 하루에 신문 "+n+"개씩 받는다네? ㅎㅎ");
+	}
+
+	public void cancel() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
