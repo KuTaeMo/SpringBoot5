@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- ProductRepository의 구현체가 되겠다! -->
+<mapper namespace="com.cos.mybatisex01.repository.ProductRepository">
+	<insert id="save">
+		INSERT INTO product(name,code) VALUES(#{name},#{code})
+	</insert>
+	
+	<!-- delete -->
+	<delete id="delete">
+		DELETE FROM product WHERE id=#{id}
+	</delete>
+	
+	<!-- update -->
+	<update id="update">
+		UPDATE product SET name=#{name}, code=#{code} WHERE id=#{id}
+	</update>
+	
+	<!-- select -->
+	<!-- resultType은 알맹이에 대한 타입만 적으면 됨 -->
+	<select id="findAll" resultType="com.cos.mybatisex01.model.Product">
+		SELECT * FROM product
+	</select>
+	
+	<select id="findById" resultType="com.cos.mybatisex01.model.Product">
+		SELECT * FROM product WHERE id=#{id}
+	</select>
+</mapper>
